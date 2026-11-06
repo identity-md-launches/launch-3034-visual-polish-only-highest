@@ -38,3 +38,52 @@ Constructor: `WheelRaid(address core, address squeeks, address wheelings, addres
 - `dev/` — tests: contract unit + randomized model test (Hardhat), Playwright end-to-end against a mock SqueekCore.
 
 Testnet only. Nothing here has value.
+
+## Static website: install, preview and rebuild
+
+No frontend installation or compilation is needed. `index.html` contains all CSS and runtime JavaScript. Google Fonts supplies Bungee, Barlow and JetBrains Mono; there are no external scripts, frameworks, new package manifests or lockfiles. Existing contract/build/dependency files are unchanged. `contracts/`, `release/` and `dev/` are reference material for this visual revision; do not build or run `dev/` to preview the site.
+
+Use Node 22+ for the optional maintenance commands. The production “build” is a dependency-free, byte-for-byte export of the page and its three assets:
+
+```sh
+node tools/export.mjs
+node tools/check.mjs
+```
+
+This produces `dist/index.html`, `dist/favicon.svg`, `dist/og.png` and `dist/card.png`. The export is included in the repository. Publish the contents of `dist/` on any static host. Local asset URLs are relative, so the same files work at a root or gateway subpath. The requested public sharing URL is `https://wheel-raid.imd.site/og.png` in both Open Graph and Twitter metadata.
+
+Preview in a foreground terminal:
+
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1 --directory dist
+```
+
+Open `http://127.0.0.1:4173/`. Live raid reads require access to the existing Sepolia RPCs and `api.squeekchain.com`; joining the raid requires an EVM wallet and Sepolia test ETH. There is no backend to install and no secret or project ID to configure.
+
+Edit the root HTML/assets, run the export command again, then run the static check. The check verifies that the application script is exactly the original plus the eight requested replacements, existing page copy and IDs are preserved, metadata is correct, both scripts parse, PNG dimensions/signatures are valid, and `dist/` matches the source with no extra files. `og.png` is a 1200×630 capture composed from the implemented arena and its unchanged live contract portrait. `card.png` is preserved.
+
+### Optional deeper checks
+
+These checks use an external tool installation; no checking dependency or cache belongs in this repository:
+
+```sh
+WHEEL_RAID_TYPESCRIPT=/absolute/path/to/typescript/lib/typescript.js node tools/typecheck.mjs
+WHEEL_RAID_PLAYWRIGHT=/absolute/path/to/playwright/index.mjs node tools/browser-check.mjs
+```
+
+TypeScript 5.9.3 was used with strict `checkJs` / `noEmit` for the new decorative script. The existing application remains JavaScript and is covered by syntax, integrity and interaction checks. Playwright requires its Chromium headless browser. On a restricted network, add `--http-bridge` to the browser check: it transports genuine remote responses through Node’s HTTP stack. No runtime code or production RPC configuration changes.
+
+The browser check creates and closes its own local preview, including a `/preview/` subpath. It first reads the real app, then uses a clearly synthetic wallet and RPC responses to exercise transaction UI and historical states. It never signs or broadcasts a transaction. Screenshots and detailed temporary results go under `test/scratch/`.
+
+### Results of this revision
+
+- Production export and static integrity checks passed; four complete runtime files, approximately 768 KiB.
+- Strict typechecking of the new decorative JavaScript passed.
+- 25 browser interaction checks passed, including live boss/HP/round/log loading; wallet discovery, cancellation, switching and disconnect; Charge; Apply settled hits; Claim trophy; repeated impacts; stale status; and older-boss paging through all test pages.
+- Layout checked at 320, 390, 800, 1280 and 1440 px. The 390×844 first screen contains the product and its full main action. No page overflow; the leaderboard scrolls in its own box, including with ArrowRight.
+- The pinned taste@1 review passed 16/16 checks with live data and loaded fonts. All animations stopped with reduced motion. Automated WCAG-tagged accessibility checks returned zero violations (30 rules passed; gradient contrast also received manual raster sampling).
+- No console errors or failed remote requests occurred in the browser validation using the HTTP bridge.
+
+Live signing, real wallet-app handoff, physical phones, WebKit and screen-reader sessions were not performed. Transaction success/rejection/pending states were validated with a synthetic provider and receipts; live reads were genuine. Browser-native 200% zoom was not available; 200% text enlargement was checked separately. The browser connector’s Chrome launcher was unavailable, so inspection used Playwright’s installed headless Chromium.
+
+The final design system is in [DESIGN.md](DESIGN.md); detailed six-domain coverage, findings, commands, evidence and limitations are in [artifacts/validation.md](artifacts/validation.md).

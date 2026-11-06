@@ -1,0 +1,27 @@
+# Generated directories are never submission assets, at any nesting level.
+node_modules/
+.cache/
+.npm/
+/test/scratch/
+
+# Explicit delivery exception budget for /artifacts/: 3,407,872 bytes (3.25 MiB).
+# Per-path maximums, including the two selected rendered screenshots:
+# validation.md: 24,576; interaction-results.json: 16,384;
+# taste-results.json: 16,384; accessibility-results.json: 16,384;
+# contrast-samples.json: 65,536; screenshot-evidence.json: 8,192;
+# design-guidance-LICENSE.txt: 16,384;
+# screenshots/desktop-1280.png: 2,621,440; screenshots/phone-390.png: 393,216.
+# Everything else under artifacts/ stays excluded. No dependency archives allowed.
+!/artifacts/
+/artifacts/*
+!/artifacts/validation.md
+!/artifacts/interaction-results.json
+!/artifacts/taste-results.json
+!/artifacts/accessibility-results.json
+!/artifacts/contrast-samples.json
+!/artifacts/screenshot-evidence.json
+!/artifacts/design-guidance-LICENSE.txt
+!/artifacts/screenshots/
+/artifacts/screenshots/*
+!/artifacts/screenshots/desktop-1280.png
+!/artifacts/screenshots/phone-390.png

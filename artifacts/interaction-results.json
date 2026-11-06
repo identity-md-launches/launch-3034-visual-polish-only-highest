@@ -1,0 +1,142 @@
+{
+  "live": {
+    "name": "Grumblegut the Dust Bunny",
+    "hp": "4,000 / 4,000",
+    "round": "364",
+    "board": "Nobody has charged this boss yet. Be the first.",
+    "log": "\ud83d\udc79\nBoss #1 appeared: level 0, 4,000 HP.\ntx \u2197",
+    "hall": "No boss has fallen yet. The first one is still standing above.",
+    "deployed": true,
+    "hallN": 24,
+    "feedErr": false
+  },
+  "results": [
+    {
+      "name": "Live Sepolia and wheel startup",
+      "passed": true,
+      "detail": "Grumblegut the Dust Bunny; 4,000 / 4,000 HP; round 364; board, log and hall loaded"
+    },
+    {
+      "name": "Static HTTP assets",
+      "passed": true,
+      "detail": "/ and PNG/SVG assets return 200 under /preview/"
+    },
+    {
+      "name": "390 first screen",
+      "passed": true,
+      "detail": "Primary charge/connect action is entirely visible"
+    },
+    {
+      "name": "No-wallet recovery",
+      "passed": true,
+      "detail": "Four existing wallet-app links and Back work"
+    },
+    {
+      "name": "Connection rejection",
+      "passed": true,
+      "detail": "Cancellation returns to an enabled Connect wallet control"
+    },
+    {
+      "name": "EIP-6963 selection and network recovery",
+      "passed": true,
+      "detail": "Named choices, Cancel, connect, switch and add-Sepolia paths work with a synthetic provider"
+    },
+    {
+      "name": "Populated board and hall",
+      "passed": true,
+      "detail": "Three medal ranks, fallen/fled plaques, claim controls and paging button render"
+    },
+    {
+      "name": "Phone leaderboard",
+      "passed": true,
+      "detail": "All columns remain in an independently scrollable, focusable region"
+    },
+    {
+      "name": "Mouse parallax",
+      "passed": true,
+      "detail": "Fine-pointer movement offsets scenery and leaving resets it"
+    },
+    {
+      "name": "Wheel state",
+      "passed": true,
+      "detail": "Wheel and legs animate only with a fresh running status"
+    },
+    {
+      "name": "Repeated hit feedback",
+      "passed": true,
+      "detail": "Both strikes restart short shake, slash, sparks and damage numbers, without replaying the entrance"
+    },
+    {
+      "name": "45-second status expiry",
+      "passed": true,
+      "detail": "Cached readings become unknown, refresh the resting hint and stop the wheel"
+    },
+    {
+      "name": "Charge interaction",
+      "passed": true,
+      "detail": "Correct contract, chain and calldata; pending lock and confirmed charged state (mock wallet/receipt)"
+    },
+    {
+      "name": "Transaction rejection",
+      "passed": true,
+      "detail": "Readable cancellation toast and enabled retry"
+    },
+    {
+      "name": "Apply settled hits and HP ghost",
+      "passed": true,
+      "detail": "Striped incoming segment remains exposed; correct advance(48) request and confirmed refresh"
+    },
+    {
+      "name": "Claim trophy",
+      "passed": true,
+      "detail": "Eligible plaque sends the correct claim selector and boss id, then refreshes owned state"
+    },
+    {
+      "name": "Show older bosses",
+      "passed": true,
+      "detail": "24 \u2192 48 \u2192 72, newest-first 24/24/4 RPC pages, all 51 past bosses reachable, button ends"
+    },
+    {
+      "name": "Empty newest hall page",
+      "passed": true,
+      "detail": "Older history remains reachable when the newest page has no completed bosses"
+    },
+    {
+      "name": "Wrong-chain and disconnect",
+      "passed": true,
+      "detail": "Switch control recovers and disconnect returns to Connect"
+    },
+    {
+      "name": "Keyboard focus",
+      "passed": true,
+      "detail": "Native controls participate in Tab order with a visible 3px ring"
+    },
+    {
+      "name": "Responsive widths",
+      "passed": true,
+      "detail": "No page overflow at 320, 390, 800, 1280 or 1440; populated content"
+    },
+    {
+      "name": "200% text enlargement",
+      "passed": true,
+      "detail": "1280 px viewport reflows without horizontal scroll (text resize, not browser-native zoom)"
+    },
+    {
+      "name": "Reduced motion",
+      "passed": true,
+      "detail": "Zero running animations and no parallax, including a running wheel"
+    },
+    {
+      "name": "Touch parallax guard",
+      "passed": true,
+      "detail": "Scenery remains still on a coarse-pointer phone context"
+    },
+    {
+      "name": "Console and remote resources",
+      "passed": true,
+      "detail": "No page errors, error console messages or failed live requests"
+    }
+  ],
+  "errors": [],
+  "failures": []
+}

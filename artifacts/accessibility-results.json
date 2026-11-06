@@ -1,0 +1,188 @@
+{
+  "violations": [],
+  "passes": 30,
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "nodes": [
+        [
+          ".brand > b"
+        ],
+        [
+          "b > i"
+        ],
+        [
+          "#runTxt"
+        ],
+        [
+          ".chip:nth-child(3)"
+        ],
+        [
+          "#rNow"
+        ],
+        [
+          ".chip:nth-child(3) > .sub"
+        ],
+        [
+          "#rLeft"
+        ],
+        [
+          "#wState > span"
+        ],
+        [
+          "#bossLvl"
+        ],
+        [
+          "#bossEyebrow"
+        ],
+        [
+          "#bossName"
+        ],
+        [
+          ".hprow > span:nth-child(1)"
+        ],
+        [
+          "#hpTxt"
+        ],
+        [
+          "#fleeTxt"
+        ],
+        [
+          "#stNow"
+        ],
+        [
+          ".stat:nth-child(1) > span"
+        ],
+        [
+          "#stRally"
+        ],
+        [
+          ".stat:nth-child(2) > span"
+        ],
+        [
+          ".stat:nth-child(3) > span"
+        ],
+        [
+          ".stat:nth-child(4) > span"
+        ],
+        [
+          ".charge"
+        ],
+        [
+          "#chargeHint"
+        ],
+        [
+          "#chargeHint > b"
+        ],
+        [
+          "#howTitle"
+        ],
+        [
+          "section[aria-labelledby=\"howTitle\"] > .phead > .sub"
+        ],
+        [
+          ".step:nth-child(1) > .n"
+        ],
+        [
+          ".step:nth-child(1) > h3"
+        ],
+        [
+          ".step:nth-child(1) > p"
+        ],
+        [
+          ".step:nth-child(2) > .n"
+        ],
+        [
+          ".step:nth-child(2) > h3"
+        ],
+        [
+          ".step:nth-child(2) > p"
+        ],
+        [
+          ".step:nth-child(3) > .n"
+        ],
+        [
+          ".step:nth-child(3) > h3"
+        ],
+        [
+          ".step:nth-child(3) > p"
+        ],
+        [
+          ".badge:nth-child(1)"
+        ],
+        [
+          ".badge:nth-child(2)"
+        ],
+        [
+          ".badge:nth-child(3)"
+        ],
+        [
+          ".badge:nth-child(4)"
+        ],
+        [
+          ".badge:nth-child(5)"
+        ],
+        [
+          "#boardTitle"
+        ],
+        [
+          "#boardCount"
+        ],
+        [
+          "th:nth-child(2)"
+        ],
+        [
+          ".num:nth-child(3)"
+        ],
+        [
+          ".num:nth-child(4)"
+        ],
+        [
+          ".num:nth-child(5)"
+        ],
+        [
+          "th:nth-child(6)"
+        ],
+        [
+          ".num:nth-child(7)"
+        ],
+        [
+          "td"
+        ],
+        [
+          "#logTitle"
+        ],
+        [
+          "section[aria-labelledby=\"logTitle\"] > .phead > .sub"
+        ],
+        [
+          ".txt"
+        ],
+        [
+          ".t"
+        ],
+        [
+          "#hallTitle"
+        ],
+        [
+          ".empty"
+        ],
+        [
+          "#links"
+        ],
+        [
+          "#links > a[target=\"_blank\"][rel=\"noopener\"]:nth-child(1)"
+        ],
+        [
+          "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2)"
+        ],
+        [
+          "footer > span:nth-child(2)"
+        ],
+        [
+          "a[href$=\"squeekchain.com\"]"
+        ]
+      ]
+    }
+  ]
+}

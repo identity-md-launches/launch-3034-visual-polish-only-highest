@@ -1,0 +1,49 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "name": "Grumblegut the Dust Bunny",
+  "hp": "4,000 / 4,000",
+  "round": "364",
+  "action": {
+    "x": 37,
+    "y": 676.21875,
+    "width": 316,
+    "height": 56,
+    "top": 676.21875,
+    "right": 353,
+    "bottom": 732.21875,
+    "left": 37
+  },
+  "documentWidth": 390,
+  "fonts": [
+    {
+      "family": "Barlow",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "Barlow",
+      "weight": "600",
+      "status": "loaded"
+    },
+    {
+      "family": "Bungee",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "JetBrains Mono",
+      "weight": "400",
+      "status": "loaded"
+    },
+    {
+      "family": "JetBrains Mono",
+      "weight": "600",
+      "status": "loaded"
+    }
+  ],
+  "errors": [],
+  "failures": []
+}
